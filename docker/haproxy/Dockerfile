@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 RUN apt-get update \
-	&& apt-get install -y haproxy rsyslog \
+	&& apt-get install -y haproxy rsyslog openssl ca-certificates \
  	&& rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /etc/haproxy/certs \
