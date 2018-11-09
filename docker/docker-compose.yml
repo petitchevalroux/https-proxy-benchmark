@@ -1,5 +1,9 @@
 version: '3'
 services:
+  back-http:
+    image: nginx:latest
+    ports:
+      - 80:80
   haproxy:
     build: ./haproxy
     depends_on: 
@@ -7,7 +11,10 @@ services:
     ports:
       - 10080:80
       - 10443:443
-  back-http:
-    image: nginx:latest
+  hitch:
+    build: ./hitch
+    depends_on:
+      - back-http
     ports:
-      - 80:80
+      - 11443:443
+
