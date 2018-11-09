@@ -28,11 +28,10 @@ ab -n 10000 -c 50 https://docker.localhost:11443/
 
 ```
 
-
 ## Service ports
-Nginx (HTTP Backend) run on port 80
-Haproxy run on port 10443
-Hitch run on port 11443
+ * Nginx (HTTP Backend) run on port 80
+ * Haproxy run on port 10443
+ * Hitch run on port 11443
 
 ## Results :
 ### 2018-10-09
