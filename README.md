@@ -36,6 +36,7 @@ ab -n 10000 -c 50 https://docker.localhost:11443/
 ## Results :
 ### 2018-10-09
 #### Hitch
+```bash
 ab -n 10000 -c 50 https://docker.localhost:11443/
 This is ApacheBench, Version 2.3 <$Revision: 1826891 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -92,7 +93,7 @@ Percentage of the requests served within a certain time (ms)
   98%   1486
   99%   1552
  100%   2782 (longest request)
-
+```
 #### Haproxy
 ```bash
 ab -n 10000 -c 50 https://docker.localhost:10443/
