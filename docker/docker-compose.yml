@@ -1,0 +1,13 @@
+version: '3'
+services:
+  haproxy:
+    build: ./haproxy
+    depends_on: 
+      - back-http
+    ports:
+      - 10080:80
+      - 10443:443
+  back-http:
+    image: nginx:latest
+    ports:
+      - 80:80
