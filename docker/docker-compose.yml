@@ -17,4 +17,10 @@ services:
       - back-http
     ports:
       - 11443:443
+  nginx:
+    build: ./nginx
+    depends_on:
+      - back-http
+    ports:
+      - 12443:443
 

@@ -6,9 +6,6 @@ Benchmarks are run using siege.
 
 All proxys use the same backend server based on [static-website-sample](https://github.com/petitchevalroux/static-website-sample) which is a docker nginx image containing static files.
 
-## Todo
- * Nginx as proxy
-
 ## Usage
 ### Clone this repository and change directory
 
@@ -31,12 +28,12 @@ docker-compose up --build
 
 ## Benchmark using siege
 ```bash
-siege -r once -c 20 -f urls-(hitch|haproxy).txt
+siege -r once -c 20 -f urls-(hitch|haproxy|nginx).txt
 
 ```
  * -r how many time to repeat (once = 1 request per url in files)
  * -c how many concurrent client
- * -f file containing urls (1 per line)  urls-hitch.txt for benchmark hitch, urls-haproxy.txt for haproxy
+ * -f file containing urls (1 per line)  urls-hitch.txt for benchmark hitch, urls-haproxy.txt for haproxy, urls-nginx.txt for haproxy
 
 ## Service ports
  * Nginx (HTTP Backend) run on port 80

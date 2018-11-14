@@ -1,0 +1,15 @@
+server {
+        listen 443 ssl default_server;
+        listen [::]:443 ssl default_server;
+
+        ssl_certificate /etc/nginx/certs/cert.pem;
+        ssl_certificate_key /etc/nginx/certs/key.pem;
+
+        root /dev/null;
+
+        server_name _;
+
+        location / {
+               proxy_pass http://back-http:80;
+        }
+}
