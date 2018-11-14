@@ -1,7 +1,7 @@
 version: '3'
 services:
   back-http:
-    image: nginx:latest
+    image: petitchevalroux/static-website-sample:latest
     ports:
       - 80:80
   haproxy:
